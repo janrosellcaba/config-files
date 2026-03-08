@@ -1,0 +1,103 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font Propo;
+    min-height: 11px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Workspaces */
+#workspaces {
+    border-radius: 10px;
+    background: #383c4a;
+}
+
+#workspaces button {
+    color: #7c818c;
+    background: transparent;
+    padding: 5px;
+    font-size: 14px;
+}
+
+#workspaces button.persistent {
+    font-size: 12px;
+}
+
+#workspaces button:hover {
+    color: #383c4a;
+    background: #7c818c;
+    border-radius: inherit;
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+}
+
+/* Shared Module Style */
+#network, #clock, #backlight, #pulseaudio, #idle_inhibitor, #battery {
+    padding: 0 6px;
+    border-radius: 10px;
+    background: #383c4a;
+    color: #ffffff;
+    transition: none;
+}
+
+#memory:hover,
+#network:hover,
+#clock:hover,
+#pulseaudio:hover,
+#idle_inhibitor:hover,
+#battery:hover {
+    background: #4a4f5f;
+}
+
+/* Audio Muted */
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+
+/* Battery States */
+#battery.charging {
+    background-color: #26A65B;
+    color: #ffffff;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #ffbe61;
+    color: black;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+/* Icon Style (optional) */
+.icon {
+    margin-right: 4px;
+}
+
+/* Tray Specific */
+#tray {
+    padding: 0 6px;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
