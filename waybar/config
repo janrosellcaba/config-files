@@ -14,14 +14,18 @@
   ],
 
   "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
+    "disable-scroll": false,
+    "all-outputs": false,
     "warp-on-scroll": false,
     "format": "{name}",
     "format-icons": {
       "active": "",
       "default": ""
-    }
+    },
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "smooth-scrolling-threshold": 2.0
   },
 
   "clock": {
