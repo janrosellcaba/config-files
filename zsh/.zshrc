@@ -31,11 +31,12 @@ alias cdm='cd /home/jan/emh/emh-mvp'
 alias cdmf='cd /home/jan/emh/emh-mvp/emh-frontend'
 alias cdmb='cd /home/jan/emh/emh-mvp/emh-backend'
 alias cdw='cd /home/jan/emh/emh-web'
-alias cda='cd /home/jan/emh/emh-ai'
+alias cda='cd /home/jan/emh/ai'
 alias c='code .'
 alias a='antigravity .'
 alias funcy='ssh emh@100.84.225.125'
 alias fl='ssh emh@192.168.1.100'
+alias upgrade='topgrade --cleanup'
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
    eval "$(ssh-agent -s)" > /dev/null

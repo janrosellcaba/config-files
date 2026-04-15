@@ -1,103 +1,100 @@
+/* Global Reset */
 * {
     border: none;
     border-radius: 0;
-    font-family: JetBrainsMono Nerd Font Propo;
-    min-height: 11px;
+    font-family: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
 }
 
+/* The Main Bar */
 window#waybar {
+    background: rgba(56, 60, 74, 0.9); /* Subtle transparency */
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* This adds the | separator after every module except the last one */
+#mpris,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#pulseaudio,
+#network,
+#battery,
+#workspaces {
+    padding: 0 10px;
+}
+
+/* Target all modules in the right side to add a separator */
+.modules-right > widget:not(:last-child) > label,
+.modules-right > widget:not(:last-child) > box {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding-right: 12px;
+}
+
+/* Specific styling for the hardware group to keep it seamless */
+#group-hardware {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding-right: 8px;
+    margin-right: 4px;
+}
+
+/* Removing the individual block backgrounds */
+#workspaces,
+#mpris,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#pulseaudio,
+#network,
+#battery,
+#clock {
     background: transparent;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-/* Workspaces */
-#workspaces {
-    border-radius: 10px;
-    background: #383c4a;
-}
-
+/* Workspace styling - simplified */
 #workspaces button {
     color: #7c818c;
-    background: transparent;
-    padding: 5px;
-    font-size: 14px;
-}
-
-#workspaces button.persistent {
-    font-size: 12px;
-}
-
-#workspaces button:hover {
-    color: #383c4a;
-    background: #7c818c;
-    border-radius: inherit;
-    transition: none;
-    box-shadow: inherit;
-    text-shadow: inherit;
+    padding: 0 5px;
 }
 
 #workspaces button.active {
     color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
 }
 
-/* Shared Module Style */
-#network, #clock, #backlight, #pulseaudio, #idle_inhibitor, #battery {
-    padding: 0 6px;
-    border-radius: 10px;
-    background: #383c4a;
-    color: #ffffff;
-    transition: none;
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
-#memory:hover,
-#network:hover,
-#clock:hover,
-#pulseaudio:hover,
-#idle_inhibitor:hover,
-#battery:hover {
-    background: #4a4f5f;
+/* Battery logic for warnings (only color changes, no blocks) */
+#battery.warning {
+    color: #ffbe61;
 }
 
-/* Audio Muted */
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
-
-/* Battery States */
-#battery.charging {
-    background-color: #26A65B;
-    color: #ffffff;
-}
-
-#battery.warning:not(.charging) {
-    background-color: #ffbe61;
-    color: black;
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+#battery.critical {
+    color: #f53c3c;
     animation: blink 0.5s linear infinite alternate;
 }
 
-/* Icon Style (optional) */
-.icon {
-    margin-right: 4px;
+#battery.charging {
+    color: #26A65B;
 }
 
-/* Tray Specific */
-#tray {
-    padding: 0 6px;
+/* Media styling */
+#mpris {
+    color: #1DB954;
 }
 
-/* Blinking Animation */
+#mpris.paused {
+    color: #7c818c;
+}
+
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: black;
+        opacity: 0.5;
     }
 }
