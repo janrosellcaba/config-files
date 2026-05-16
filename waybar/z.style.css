@@ -35,7 +35,7 @@ window#waybar {
 }
 
 /* Specific styling for the hardware group to keep it seamless */
-.hardware {
+#group-hardware {
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     padding-right: 8px;
     margin-right: 4px;
@@ -73,19 +73,6 @@ window#waybar {
 /* Battery logic for warnings (only color changes, no blocks) */
 #battery.warning {
     color: #ffbe61;
-}
-
-/* Enhanced Calendar Tooltip Styling */
-tooltip {
-    background: rgba(40, 44, 52, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-tooltip label {
-    color: #ffffff;
-    padding: 12px;
 }
 
 #battery.critical {

@@ -3,8 +3,8 @@
     {
       "name": "eDP-1",
       "description": "BOE 0x0747",
-      "x": 3204,
-      "y": 1687,
+      "x": 5134,
+      "y": 1440,
       "physical_width": 1920,
       "physical_height": 1080,
       "transform": "normal",
@@ -19,10 +19,10 @@
       "active": true
     },
     {
-      "name": "DP-3",
+      "name": "DP-6",
       "description": "Dell Inc. DELL U2722DE BCYT4P3",
-      "x": 3204,
-      "y": 247,
+      "x": 5134,
+      "y": 0,
       "physical_width": 2560,
       "physical_height": 1440,
       "transform": "normal",
@@ -37,10 +37,10 @@
       "active": true
     },
     {
-      "name": "DP-4",
+      "name": "DP-7",
       "description": "Dell Inc. DELL U2417H 5K9YD79MDZGL",
-      "x": 2124,
-      "y": 247,
+      "x": 4054,
+      "y": 0,
       "physical_width": 1920,
       "physical_height": 1080,
       "transform": "90",
@@ -55,10 +55,10 @@
       "active": true
     },
     {
-      "name": "DP-5",
+      "name": "DP-8",
       "description": "Dell Inc. DELL U2417H 5K9YD79MDZAL",
-      "x": 5764,
-      "y": 607,
+      "x": 7694,
+      "y": 360,
       "physical_width": 1920,
       "physical_height": 1080,
       "transform": "normal",

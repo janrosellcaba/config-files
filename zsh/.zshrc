@@ -28,15 +28,28 @@ alias cl='clear'
 alias v='nvim'
 alias cde='cd /home/jan/emh'
 alias cdm='cd /home/jan/emh/emh-mvp'
-alias cdmf='cd /home/jan/emh/emh-mvp/emh-frontend'
-alias cdmb='cd /home/jan/emh/emh-mvp/emh-backend'
+alias cdM='cd /home/jan/emh/MVP'
 alias cdw='cd /home/jan/emh/emh-web'
-alias cda='cd /home/jan/emh/ai'
+alias cdr='cd /home/jan/emh/emh-reports'
+alias cdo='cd /home/jan/personal/webOps-bcn'
+alias cdu='cd /home/jan/uni'
 alias c='code .'
 alias a='antigravity .'
-alias funcy='ssh emh@100.84.225.125'
+alias funcy='ssh emh@100.101.180.93'
+alias mcp='ssh emh@100.126.79.70'
 alias fl='ssh emh@192.168.1.100'
 alias upgrade='topgrade --cleanup'
+alias sz='source ~/.config/zsh/.zshrc'
+alias vz='nvim ~/.config/zsh/.zshrc'
+
+#
+# relax
+#
+alias matrix='cmatrix'
+alias aquarium='asciiquarium'
+alias bonsai='cbonsai'
+alias pipes='pipes.sh'
+alias train='sl'
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
    eval "$(ssh-agent -s)" > /dev/null
